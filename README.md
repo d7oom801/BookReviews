@@ -152,11 +152,9 @@ To learn more, visit the [Django Admin Interface Documentation](https://pypi.org
 ### Book Endpoints
 1. **View All Books**
    - URL: `GET /api/books/`
-   - Requires JWT token in the Authorization header.
 
 2. **View a Single Book**
    - URL: `GET /api/books/<int:pk>/`
-   - Requires JWT token.
    - `<int:pk>` is the ID of the book to retrieve.
 
 3. **Add a New Book (Admin-Only)**  
@@ -203,7 +201,7 @@ To learn more, visit the [Django Admin Interface Documentation](https://pypi.org
    - URL: `GET /api/books/<int:book_id>/reviews/`
    - Requires JWT token.
 
-3. **View, Update or Delete a Single Review**
+3. **View, Update or Delete a Single Review(Review owner only)**
    - URL: `GET /api/reviews/<int:review_id>/`
    - `<int:review_id>` refers to the ID of the review.
    - Requires JWT token.
